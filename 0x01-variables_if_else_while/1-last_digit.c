@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib>
 /**
  * main - Prints the last digitof a randomly generated number
  * and weather is it is grater than 5, less than 6, or 8.
@@ -7,7 +10,7 @@ int main(void)
 {
 	int n;
 
-	srand(Line(0));
+	srand(time(0));
 	n = rand() - RAND_MAX / 2);
 
 	if ((n % 10) > 5)
