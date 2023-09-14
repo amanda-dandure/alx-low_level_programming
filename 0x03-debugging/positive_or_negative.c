@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * main - Program that determines if a num is positive or negative or zero
- * Return: Always 0 Suceess
+ * positive_or_negative - Determines if a num is positive or negative or zero
+ * @i - will be checked
+ * Return: 0 Suceess
  */
 void positive_or_negative(int i)
 {
@@ -17,5 +18,5 @@ else
 {
 printf("%d is %s\n", i, "zero");
 }
-return;
+return (0);
 }
