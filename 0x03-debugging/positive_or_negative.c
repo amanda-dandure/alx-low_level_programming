@@ -4,6 +4,7 @@
  * @i - will be checked
  * Return: 0 Suceess
  */
+
 void positive_or_negative(int i)
 {
 if (i < 0)
