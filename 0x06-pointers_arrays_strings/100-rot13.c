@@ -8,19 +8,23 @@
 
 char *rot13(char *s)
 {
-char *ptr = s;
+int a;
+int b;
+char data[] =
+	"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char rot13 =
+	"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzadbdefghijklm";
 
-while (*ptr != '\0')
+for (a = 0; s[a] != '\0'; a++)
 {
-if ((*ptr >= 'A' && *ptr <= 'M') || (*ptr >= 'a' && *ptr <= 'm'))
-{
-*ptr += 13;
-}
-else if ((*ptr >= 'N' && *ptr <= 'Z') || (*ptr >= 'n' && *ptr <= 'z'))
-{
-*ptr -= 13;
-}
-ptr++;
+	for (b = 0; b < 52; b++)
+	{
+		if (s[a] == data[b])
+		{
+			s[a] == rot13[b];
+			break;
+		}
+	}
 }
 return (s);
 }
